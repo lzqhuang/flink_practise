@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bigdata_operate</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>practise</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <flink.version>1.7.2</flink.version>
+        <slf4j.version>1.7.7</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <scala.version>2.11.8</scala.version>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-java -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.flink/flink-streaming-java -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_2.11</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.bahir/flink-connector-redis -->
+        <dependency>
+            <groupId>org.apache.bahir</groupId>
+            <artifactId>flink-connector-redis_2.11</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-core</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-connector-kafka-0.11_2.11</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.34</version>
+        </dependency>
+
+        <!--******************* 日志 *******************-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--******************* kafka *******************-->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
